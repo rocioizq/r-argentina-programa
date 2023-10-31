@@ -7,28 +7,28 @@
 // 4. obtener el número que más se repite y mostrarlo en un <em> pre-creado con el texto "El número más frecuente es..."
 
 const elementosLista = document.querySelectorAll("li");
-const arrayDeNumeros = [];
+const numeros = [];
 
 for (let i = 0; i < elementosLista.length; i++) {
-    arrayDeNumeros.push(parseInt(elementosLista[i].innerText));
+    numeros.push(parseInt(elementosLista[i].innerText));
 }
 
 let sumaTotal = 0;
-for (let i = 0; i < arrayDeNumeros.length; i++) {
-    sumaTotal += arrayDeNumeros[i];
+for (let i = 0; i < numeros.length; i++) {
+    sumaTotal += numeros[i];
 }
 
-const promedio = sumaTotal / arrayDeNumeros.length;
+const promedio = sumaTotal / numeros.length;
 
-const numeroMasChico = Math.min(...arrayDeNumeros);
-const numeroMasGrande = Math.max(...arrayDeNumeros);
+const numeroMasChico = Math.min(...numeros);
+const numeroMasGrande = Math.max(...numeros);
 
 const conteoNumeros = {};
 let conteoMaximo = 0;
 let numeroMasFrecuente;
 
-for (let i = 0; i < arrayDeNumeros.length; i++) {
-    const num = arrayDeNumeros[i];
+for (let i = 0; i < numeros.length; i++) {
+    const numero = numeros[i];
     conteoNumeros[num] = (conteoNumeros[num] || 0)+ 1;
     if (conteoNumeros[num] > conteoMaximo) {
         conteoMaximo = conteoNumeros[num];
@@ -37,6 +37,6 @@ for (let i = 0; i < arrayDeNumeros.length; i++) {
 }
 
 document.getElementById("promedio").innerText = `El promedio es: ${promedio}`;
-document.getElementById('numeroMasChico').innerText = `El número más pequeño es: ${numeroMasChico}`;
-document.getElementById('numeroMasGrande').innerText = `El número más grande es: ${numeroMasGrande}`;
-document.getElementById('numeroMasFrecuente').innerText = `El número más frecuente es: ${numeroMasFrecuente}`;
+document.getElementById('numero-mas-chico').innerText = `El número más pequeño es: ${numeroMasChico}`;
+document.getElementById('numero-mas-grande').innerText = `El número más grande es: ${numeroMasGrande}`;
+document.getElementById('numero-mas-frecuente').innerText = `El número más frecuente es: ${numeroMasFrecuente}`;
