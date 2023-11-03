@@ -6,11 +6,11 @@
 // 3. obtener el número más grande y mostrarlo en un <em> pre-creado con el texto "El número más grande es..."
 // 4. obtener el número que más se repite y mostrarlo en un <em> pre-creado con el texto "El número más frecuente es..."
 
-const elementosLista = document.querySelectorAll("li");
+const lista = document.querySelectorAll("li");
 const numeros = [];
 
-for (let i = 0; i < elementosLista.length; i++) {
-    numeros.push(parseInt(elementosLista[i].innerText));
+for (let i = 0; i < lista.length; i++) {
+    numeros.push(parseInt(lista[i].innerText));
 }
 
 let sumaTotal = 0;
@@ -20,8 +20,19 @@ for (let i = 0; i < numeros.length; i++) {
 
 const promedio = sumaTotal / numeros.length;
 
-const numeroMasChico = Math.min(...numeros);
-const numeroMasGrande = Math.max(...numeros);
+let numeroMasChico = numeros[0];
+for (let i = 1; i < numeros.length; i++) {
+    if(numeros[i] < numeroMasChico) {
+        numeroMasChico = numeros[i];
+    }
+}
+
+let numeroMasGrande = numeros[0];
+for (let i = 1; i < numeros.length; i++) {
+    if (numeros[i] > numeroMasGrande) {
+        numeroMasGrande = numeros[i]
+    }
+}
 
 const conteoNumeros = {};
 let conteoMaximo = 0;
@@ -29,10 +40,10 @@ let numeroMasFrecuente;
 
 for (let i = 0; i < numeros.length; i++) {
     const numero = numeros[i];
-    conteoNumeros[num] = (conteoNumeros[num] || 0)+ 1;
-    if (conteoNumeros[num] > conteoMaximo) {
-        conteoMaximo = conteoNumeros[num];
-        numeroMasFrecuente = num;
+    conteoNumeros[numero] = (conteoNumeros[numero] || 0)+ 1;
+    if (conteoNumeros[numero] > conteoMaximo) {
+        conteoMaximo = conteoNumeros[numero];
+        numeroMasFrecuente = numero;
     }
 }
 
