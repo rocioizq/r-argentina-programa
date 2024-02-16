@@ -12,62 +12,48 @@
 
     <div class="container">
         <form>
-            <input type="number"  class="horas" placeholder="Horas clase 01" min="0">
-            <input type="number"  class="minutos" placeholder="Minutos clase 01" min="0">
-            <input type="number"  class="segundos" placeholder="Segundos clase 01" min="0">
+            <div class="input-group">
+                <input type="number"  class="horas" placeholder="Horas clase 01" min="0">
+                <input type="number"  class="minutos" placeholder="Minutos clase 01" min="0">
+                <input type="number"  class="segundos" placeholder="Segundos clase 01" min="0">
+            </div>
+            
+            <div class="input-group">
+                <input type="number"  class="horas" placeholder="Horas clase 02" min="0">
+                <input type="number"  class="minutos" placeholder="Minutos clase 02" min="0">
+                <input type="number"  class="segundos" placeholder="Segundos clase 02" min="0">
+            </div>
 
-            <br>
-            <br>
-            <br>
-
-            <input type="number"  class="horas" placeholder="Horas clase 02" min="0">
-            <input type="number"  class="minutos" placeholder="Minutos clase 02" min="0">
-            <input type="number"  class="segundos" placeholder="Segundos clase 02" min="0">
-
-            <br>
-            <br>
-            <br>
-
-            <input type="number"  class="horas" placeholder="Horas clase 03" min="0">
-            <input type="number"  class="minutos" placeholder="Minutos clase 03" min="0">
-            <input type="number"  class="segundos" placeholder="Segundos clase 03" min="0">
-
-            <br>
-            <br>
-            <br>
-
-            <input type="number" class="horas" placeholder="Horas clase 04" min="0">
-            <input type="number" class="minutos" placeholder="Minutos clase 04" min="0">
-            <input type="number" class="segundos" placeholder="Segundos clase 04" min="0">
-
-            <br>
-            <br>
-            <br>
-
-            <input type="number"  class="horas" placeholder="Horas clase 05" min="0">
-            <input type="number"  class="minutos" placeholder="Minutos clase 05" min="0">
-            <input type="number"  class="segundos" placeholder="Segundos clase 05" min="0">
-
-            <br>
-            <br>
+            
+            <div class="input-group">
+                <input type="number"  class="horas" placeholder="Horas clase 03" min="0">
+                <input type="number"  class="minutos" placeholder="Minutos clase 03" min="0">
+                <input type="number"  class="segundos" placeholder="Segundos clase 03" min="0">
+            </div>
+           
+            <div class="input-group">
+                <input type="number" class="horas" placeholder="Horas clase 04" min="0">
+                <input type="number" class="minutos" placeholder="Minutos clase 04" min="0">
+                <input type="number" class="segundos" placeholder="Segundos clase 04" min="0">
+            </div>
+           
+            <div class="input-group">
+                <input type="number"  class="horas" placeholder="Horas clase 05" min="0">
+                <input type="number"  class="minutos" placeholder="Minutos clase 05" min="0">
+                <input type="number"  class="segundos" placeholder="Segundos clase 05" min="0">
+            </div>
+           
 
             <button type="button" id="btn-calcular" onclick="calcularTiempo()">Calcular tiempo total</button>
 
-            <br>
-            <br>
-
-            <strong>La duración total de los videos es de:</strong>
-            <input type="text" disabled id="duracionTotal"/>
+           
+            <div class="input-group">
+                <strong>La duración total de los videos es de:</strong>
+                <input type="text" disabled id="duracionTotal"/>
+            </div>
             
         </form>
     </div>
-
-
-
-    <script src="tarea3.js"></script>
-</body>
-</html>
-
 
 
 
