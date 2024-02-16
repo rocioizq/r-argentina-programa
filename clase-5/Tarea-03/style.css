@@ -44,6 +44,11 @@ button {
     border-radius: .5em;
 }
 
+button:hover {
+    background-color: rgb(7, 137, 94);
+    cursor: pointer;
+}
+
 strong {
     margin-left: 7em;
     text-align: center;
