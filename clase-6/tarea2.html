@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 - Clase 6</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+  <main>
+      <div class="calcular-salarios">
+          <h1>Calcular salarios</h1>
+          <button type="button" id="enviar-informacion">Agregar</button>
+          <button type="button" id="eliminar">Eliminar</button>
+          <button type="button" id="calcular" class="oculto">Calcular</button>
+      </div>
+
+      <div id="integrantes"></div>
+
+
+      <div class="oculto" id="salarios">
+          <label>El salario mayor anual es: </label>
+            <input type="number" disabled id="salario-mayor-anual">
+
+          <label>El salario menor anual es: </label>
+            <input type="number" disabled id="salario-menor-anual">
+
+          <label>El promedio de salarios anuales es: </label>
+            <input type="number" disabled id="promedio-salarios-anual">
+
+          <label>El promedio de salarios mensuales es: </label>
+            <input type="number" disabled id="promedio-salarios-mensual">
+      </div>
+  </main>
+  <script src="tarea2.js"></script>
+</body>
+</html>
