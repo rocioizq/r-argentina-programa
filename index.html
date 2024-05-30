@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Clase 6 - r/Argentina programa</title>
+</head>
+<body>
+    <form id="calcular-edades">
+        <label for="cantidad-integrantes">¿Cuántos integrantes hay en tu familia?</label>
+        
+        <input type="number" id="cantidad-integrantes">
+        <br>
+        <button type="button" id="enviar-informacion">Enviar</button>
+
+        <div class="integrantes">
+
+        </div>
+
+        <button type="button"  class="calcular oculto">Calcular</button>
+
+        <div class="analisis oculto">
+            <p>La edad más grande es: <strong id="edad-mayor"></strong></p> 
+            <p>La edad mas chica es: <strong id="edad-menor"></strong></p>
+            <p>El promedio de edad es: <strong id="edad-promedio"></strong></p>
+        </div>
+
+        <button type="reset" id="empezar-de-nuevo" class="reset">Reset</button>
+    </form>
+
+    <script type="text/javascript" src="tarea-clase-6.js"></script>
+</body>
+</html>
