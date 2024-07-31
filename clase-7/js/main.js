@@ -22,13 +22,16 @@ function validarCiudad(ciudad) {
     return "";
 }
 
-function validadDescripcionRegalo(descripcionRegalo) {
+function validarDescripcionRegalo(descripcionRegalo) {
     if (descripcionRegalo.length >= 100) {
         return "El campo es demasiado largo";
+
     } else if (descripcionRegalo.length === 0) {
         return "El campo no puede estar vacío";
-    } else if (!/^[a-z0-9\s]+$/i.test(descripcionRegalo)) {
+
+    } else if (!/^[a-z0-9]+$/i.test(descripcionRegalo)) {
         return "Este campo debe tener solo letras y números";
+
     } else {
         return "";
     }
@@ -44,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const errorNombre = validarNombre(nombre);
         const errorCiudad = validarCiudad(ciudad);
-        const errorDescripcionRegalo = validadDescripcionRegalo(descripcionRegalo);
+        const errorDescripcionRegalo = validarDescripcionRegalo(descripcionRegalo);
 
         const errores = {
             nombre: errorNombre,
