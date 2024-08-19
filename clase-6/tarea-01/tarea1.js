@@ -47,6 +47,10 @@ document.querySelector("#empezar-de-nuevo").onclick = function(event) {
 
     borrarIntegrantesAnteriores();
 
+    document.querySelector("#edad-mayor").textContent = '';
+    document.querySelector("#edad-menor").textContent = '';
+    document.querySelector("#edad-promedio").textContent = '';
+    
     ocultarElemento("analisis");
     ocultarElemento("calcular");
 
@@ -57,28 +61,35 @@ document.querySelector("#empezar-de-nuevo").onclick = function(event) {
 
 function crearIntegrantes(cantidadIntegrantes) {
     const contenedor = document.querySelector(".integrantes");
+    contenedor.classList.add("d-flex", "flex-column", "align-items-center"); 
 
-    for(let i = 0; i < cantidadIntegrantes; i++) {
+    for (let i = 0; i < cantidadIntegrantes; i++) {
+        const div = document.createElement("div");
+        div.classList.add("mb-3", "w-50", "input-container"); 
+
         const label = document.createElement("label");
         label.textContent = `Edad del integrante ${i + 1}: `;
+        label.classList.add("form-label");
 
         const input = document.createElement("input");
         input.type = "number";
-        input.textContent = ` `;
+        input.classList.add("form-control");
 
-        contenedor.appendChild(label);
-        contenedor.appendChild(input);
+        div.appendChild(label);
+        div.appendChild(input);
+        contenedor.appendChild(div);
     }
 }
 
 function borrarIntegrantesAnteriores() {
     const contenedorIntegrantes = document.querySelector(".integrantes");
-    const integrantes = contenedorIntegrantes.querySelectorAll("label, input");
+    const integrantes = contenedorIntegrantes.querySelectorAll(".input-container"); 
 
-    for (let i = 0; i < integrantes.length; i++) {
-        contenedorIntegrantes.removeChild(integrantes[i]);
-    }
+    integrantes.forEach(function(integrante) {
+        contenedorIntegrantes.removeChild(integrante);
+    });
 }
+
 
 function ocultarElemento(clase) {
     document.querySelector("." + clase).classList.add("oculto");

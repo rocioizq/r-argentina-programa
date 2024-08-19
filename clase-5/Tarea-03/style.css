@@ -1,3 +1,31 @@
+.text-purple-700 {
+    color: #6c43a1; 
+}
+
+.border-purple-700 {
+    border-color: #6c43a1 !important;
+}
+
+
+.border-purple-700:focus {
+    border-color: #6c43a1 !important; 
+    box-shadow: 0 0 0 0.2rem rgba(108, 67, 161, 0.25);
+}
+
+header {
+    background-color: #6c43a1; 
+    color: white;
+    font-weight: 700; 
+}
+
+h1 {
+    padding: 20px; 
+    margin-bottom: 0; 
+}
+
+
+
+/*
 * {
     margin: 0;
     padding: 0;
