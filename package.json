@@ -1,0 +1,23 @@
+{
+  "name": "r-argentina-programa",
+  "version": "1.0.0",
+  "description": "Ejercicios de Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rocioizq/r-argentina-programa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rocioizq/r-argentina-programa/issues"
+  },
+  "homepage": "https://github.com/rocioizq/r-argentina-programa#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1"
+  }
+}

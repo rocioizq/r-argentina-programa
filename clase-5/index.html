@@ -2,22 +2,34 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Clase 5 - r/Argentina Programa</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="style.css">-->
+    <title>Tarea 01 - Clase 5</title>
 </head>
-<body>
-    <form>
-        <label for="salario-anual">Salario anual:</label>
-        <input type="number" id="salario-anual" placeholder="Ej.: 100000"/>
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="container shadow-lg p-3 mb-5 bg-body-tertiary rounded" style="max-width: 400px;">
+        
+        <form class="p-3 mb-2 ">
+            <div class="form-group mb-3">
+                <label for="salario-anual" class="fs-5">Salario anual:</label>
+                <input type="number" class="form-control w-100 p-3" id="salario-anual" placeholder="Ej.: 100000">
+            </div>
 
-        <label for="salario-anual">Salario mensual:</label>
-        <input type="number" disabled id="salario-mensual"/>
+            <div class="form-group mb-3">
+                <label for="salario-mensual" class="fs-5">Salario mensual:</label>
+                <input type="number" class="form-control w-100 p-3" disabled id="salario-mensual">
+            </div>
 
-        <button type="button" id="calcular-salario-mensual">Calcular</button>
-        <button type="reset">Limpiar</button>
-    </form>
-
-    <script type="text/javascript" src="tarea-clase-5.js"></script>
+            <div class="text-center">
+                <button type="button" id="calcular-salario-mensual" class="btn btn-success btn-lg me-2">Calcular</button>
+                <button type="reset" class="btn btn-outline-secondary btn-lg">Limpiar</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="tarea1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
