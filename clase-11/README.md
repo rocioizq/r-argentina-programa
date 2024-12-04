@@ -2,5 +2,5 @@
 
 Juego de memoria hecho con HTML, CSS, JAVASCRIPT y CYPRESS.
 
-Live Site: https://r-argentina-programa.vercel.app/
+Live Site: https://memotest-rarg.vercel.app/
 
