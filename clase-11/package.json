@@ -4,13 +4,14 @@
   "description": "Ejercicios de Javascript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rocioizq/r-argentina-programa.git"
   },
-  "author": "",
+  "author": "Rocio Izquierdo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rocioizq/r-argentina-programa/issues"
@@ -19,5 +20,8 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "cypress": "^13.16.0"
   }
 }
