@@ -1,24 +1,22 @@
 const tablero = document.querySelector(".tablero");
 const cuadros = document.querySelectorAll(".item");
-const finDeJuego = document.querySelector(".finDeJuego");
+const finDeJuego = document.querySelector(".fin-de-juego");
 const turnosTexto = document.querySelector("#turnos");
 const btnReinicio = document.querySelector(".btn-reinicio");
-const emojis = ["🗼", "🗿", "🗽", "🌉", "🕌", "⛩️", "✈️", "🏞️", "🗼", "🗿", "🗽", "🌉", "🕌", "⛩️", "✈️", "🏞️"];
 let turnos = 0;
 let primerCuadro = null;
 let cuadrosDesactivados = 0;
 
-function emojisRandoms() {
-    emojis.sort(function() {
+function obtenerEmojisAleatorios() {
+    const emojis = ["🗼", "🗿", "🗽", "🌉", "🕌", "⛩️", "✈️", "🏞️", "🗼", "🗿", "🗽", "🌉", "🕌", "⛩️", "✈️", "🏞️"];
+    return emojis.sort(function() {
         return Math.random() - 0.5;
     });
-
-    return emojis;
 }
 
 function iniciarJuego() {
-    const emojisAleatorios = emojisRandoms();
-    cuadros.forEach(function (cuadro, index) {
+    const emojisAleatorios = obtenerEmojisAleatorios();
+    cuadros.forEach(function(cuadro, index) {
         cuadro.querySelector(".back").textContent = emojisAleatorios[index];
     });
 }
