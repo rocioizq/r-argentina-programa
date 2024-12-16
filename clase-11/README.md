@@ -12,4 +12,4 @@ Memotest es una aplicación web interactiva diseñada para poner a prueba tu mem
 
 # Imágenes 
 
-![Juego de memoria con emojis](/favicon_io/memotest.png)
+![Juego de memoria con emojis](favicon_io/memotest.png)
